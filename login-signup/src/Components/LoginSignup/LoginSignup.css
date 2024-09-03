@@ -1,0 +1,202 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px auto;
+    /* Reduced top margin for smaller container */
+    width: 85%;
+    /* Adjusted width percentage for smaller screens */
+    max-width: 500px;
+    /* Max width for all screens */
+    background: white;
+    padding: 15px;
+    /* Reduced padding for smaller height */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    overflow: hidden;
+    /* Prevent overflow of child elements */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    /* Reduced gap between elements */
+    width: 100%;
+    margin-top: 20px;
+    /* Reduced margin */
+}
+
+.text {
+    color: rgb(165, 16, 148);
+    font-size: 36px;
+    /* Font size for better scalability */
+    font-weight: 900;
+}
+
+.underline {
+    width: 65px;
+    height: 5px;
+    background: rgb(202, 28, 141);
+    border-radius: 9px;
+}
+
+.inputs {
+    margin-top: 40px;
+    /* Reduced margin for smaller height */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Reduced gap between input fields */
+}
+
+.name,
+.email,
+.password {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    /* Full width for responsive layout */
+    max-width: 450px;
+    /* Max width for all screens */
+    height: 60px;
+    /* Reduced height for smaller inputs */
+    background: #efe6e6;
+    border-radius: 7px;
+    padding: 0 10px;
+    /* Reduced padding for smaller height */
+    box-sizing: border-box;
+    /* Ensures padding does not exceed the width */
+}
+
+.name img,
+.email img,
+.password img {
+    margin-right: 10px;
+    /* Adjusted margin for better spacing */
+}
+
+.name input,
+.email input,
+.password input {
+    height: 40px;
+    /* Reduced height for input fields */
+    width: calc(100% - 30px);
+    /* Adjusted width to fit within container */
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #070707;
+    /* Adjusted text color for readability */
+    font-size: 16px;
+    /* Font size for better scalability */
+    box-sizing: border-box;
+    /* Ensures padding does not exceed the width */
+}
+
+.lost-password {
+    margin-top: 15px;
+    /* Margin above the text */
+    text-align: center;
+    /* Center the text horizontally */
+    color: #070707;
+    /* Text color */
+    font-size: 16px;
+    /* Font size for better scalability */
+}
+
+.lost-password span {
+    color: rgb(150, 34, 101);
+    /* Link color */
+    cursor: pointer;
+    /* Pointer cursor for better UX */
+}
+
+.submit-container {
+    display: flex;
+    flex-direction: column;
+    /* Stacked buttons by default */
+    gap: 15px;
+    /* Reduced gap between buttons */
+    margin: 30px auto;
+    /* Reduced margin for better spacing */
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* Full width for responsive layout */
+    max-width: 180px;
+    /* Max width for buttons */
+    height: 50px;
+    /* Adjusted height for buttons */
+    color: white;
+    background: rgb(199, 80, 153);
+    border-radius: 25px;
+    /* Border radius */
+    font-size: 18px;
+    /* Font size for better scalability */
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 auto;
+    /* Centered buttons */
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .container {
+        width: 85%;
+        /* Smaller width for tablet and up */
+    }
+
+    .submit-container {
+        flex-direction: row;
+        /* Side by side buttons for larger screens */
+        justify-content: center;
+    }
+
+    .submit {
+        max-width: none;
+        /* Removes max-width for button */
+        width: 180px;
+        /* Fixed width for buttons on larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 24px;
+        /* Smaller font size for mobile devices */
+    }
+
+    .name input,
+    .email input,
+    .password input {
+        font-size: 14px;
+        /* Smaller input font size for mobile devices */
+    }
+
+    .lost-password {
+        font-size: 14px;
+        /* Smaller font size for mobile devices */
+        margin-top: 10px;
+        /* Reduced margin for smaller screens */
+        text-align: center;
+        /* Center-align text on small screens */
+    }
+
+    .submit {
+        height: 40px;
+        /* Smaller button height for mobile devices */
+    }
+}
+.gray{
+    background: white;
+    color:#676767
+}
